@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { encryptData, decryptData } from "../utils/cryptoUtils";
 import ThoughtModal from "./ThoughtModal";
+import ReadMoreModal from "./ReadMoreModal"; // <-- Novo Modal de leitura
 
 export default function Vault({ password, onLogout }) {
   const [thoughts, setThoughts] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [selectedThought, setSelectedThought] = useState(null); // <-- Estado para o "Continuar lendo"
 
   useEffect(() => {
     const cipher = localStorage.getItem("vault-data");
@@ -33,6 +35,14 @@ export default function Vault({ password, onLogout }) {
     saveData(newData);
   };
 
+  const openReadMore = (thought) => {
+    setSelectedThought(thought);
+  };
+
+  const closeReadMore = () => {
+    setSelectedThought(null);
+  };
+
   return (
     <div className="vault-container">
       <div className="vault-header">
@@ -43,13 +53,32 @@ export default function Vault({ password, onLogout }) {
       <div className="thoughts-grid">
         {thoughts.map((t) => (
           <div key={t.id} className="thought-card">
-            <p>{t.text}</p>
-            <button onClick={() => deleteThought(t.id)}>Excluir</button>
-          </div>
+              {/* Imagem no topo do card */}
+              <img
+                // src="/card-frame.png" // <-- Coloque sua imagem na pasta public
+                alt="Carta mágica"
+                className="card-image"
+              />
+
+              {/* Texto da nota */}
+              <p className="thought-text">
+                {t.text.length > 200 ? t.text.substring(0, 200) + "..." : t.text}
+              </p>
+
+              <div className="card-buttons">
+                {t.text.length > 200 && (
+                  <button className="read-more-button" onClick={() => openReadMore(t)}>Continuar lendo</button>
+                )}
+                <button className="delete-button" onClick={() => deleteThought(t.id)}>Excluir</button>
+              </div>
+          </div> 
         ))}
       </div>
 
-      <button className="add-thought-button" onClick={() => setShowModal(true)}>
+      <button
+        className="add-thought-button"
+        onClick={() => setShowModal(true)}
+      >
         +
       </button>
 
@@ -61,6 +90,10 @@ export default function Vault({ password, onLogout }) {
             setShowModal(false);
           }}
         />
+      )}
+
+      {selectedThought && (
+        <ReadMoreModal thought={selectedThought} onClose={closeReadMore} />
       )}
     </div>
   );

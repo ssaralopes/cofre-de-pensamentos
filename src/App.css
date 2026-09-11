@@ -17,15 +17,13 @@ body {
 }
 
 .page-title {
-    color: 	#edead6;
+    color: #efeeee;
     margin-top: 1rem;  /* 🔥 Adiciona espaçamento superior */
     font-family: 'Cinzel', serif;
-    /* font-weight: bold; */
     margin-bottom: 0;
     font-size: 4.10rem;
-    /* font-weight: bold; */
     letter-spacing: 4px;
-    /* text-shadow: none;  */
+    text-align: center;
     text-shadow: 1px 1px 3px #18130a;
 }
 
@@ -36,7 +34,7 @@ body {
   text-align: center;
   font-family: 'Cinzel', serif;
   font-size: 1.05rem;
-  color: #f1efe0;
+  color: #d7d5c6;
   line-height: 1.6;
   padding: 0 1rem;
   margin-bottom: 1rem;
@@ -168,6 +166,7 @@ body {
     background-color: #6b583b;
     color: white;
     border: none;
+    font-family: 'Cinzel', serif;
     padding: 10px 20px;
     border-radius: 25px;
     cursor: pointer;
@@ -206,7 +205,7 @@ body {
 }
 
 .cofre-meaning p {
-  color: #f1efe0;
+  color: #d7d5c6;
   font-size: 0.95rem;
   max-width: 75%;           /* ocupa mais largura da tela */
   margin: 0 auto 1.5rem;    /* centraliza horizontalmente */
@@ -235,7 +234,7 @@ body {
 
 .git-button:hover {
   background-color: #b0894e;
-  color: #0d0d0d;
+  color: #ebe8d0;
   transform: scale(1.05);
 }
 
@@ -257,6 +256,17 @@ body {
 /* ============================
    🗝️ Vault (Cofre)
 ============================ */
+
+body.vault-body {
+  /* background: radial-gradient(circle, #0f1d17 20%, #1a2c20 100%); */
+  background: #1e1426;
+  background-size: cover;
+  background-position: center;
+  color: #f0f0f0;
+  min-height: 100vh;
+  font-family: 'Serif', serif;
+}
+
 .vault-container {
     padding: 40px;
 }
@@ -269,14 +279,14 @@ body {
 }
 
 .vault-header h1 {
-    color: #c0a96d;
+    color: #d8cfa9;
     text-shadow: 1px 1px 5px #000;
 }
 
 .vault-header button {
     background: transparent;
-    color: #c0a96d;
-    border: 1px solid #c0a96d;
+    color: #cbb9df;
+    border: 1px solid #cbb9df;
     padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
@@ -284,80 +294,244 @@ body {
 }
 
 .vault-header button:hover {
-    background: #c0a96d;
+    background: #cbb9df;
     color: #0d0d0d;
 }
 
 .thoughts-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
+    padding: 20px;
 }
 
-.thought-card {
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid #c0a96d;
-    border-radius: 12px;
+.thought-card { /*cards das notas*/
+    position: relative;
+    background-color: #2b1d37; 
+    border-radius: 20px;
     padding: 20px;
-    width: 260px;
-    min-height: 150px;
+    color: #fff9ef;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: space-between;
-    box-shadow: 0 0 10px rgba(192, 169, 109, 0.3);
-    transition: transform 0.3s;
+    gap: 10px;
+    height: 300px;
+    width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(3px);
 }
 
 .thought-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 15px rgba(246, 227, 180, 0.6);
+    border-color: #e6c98a;
 }
 
 .thought-card p {
-    color: #f0f0f0;
-    white-space: pre-wrap;
-}
-
-.thought-card button {
-    background: transparent;
-    color: #c0a96d;
-    border: 1px solid #c0a96d;
-    padding: 5px 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    align-self: flex-end;
-    transition: background 0.3s, color 0.3s;
-}
-
-.thought-card button:hover {
-    background: #c0a96d;
-    color: #0d0d0d;
+    margin: 0;
+    word-break: break-word;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .add-thought-button {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: #c0a96d;
-    color: #0d0d0d;
+    background: #cba96e;
+    color: #5d4639;
     border: none;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     font-size: 2em;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(192, 169, 109, 0.5);
-    transition: background 0.3s;
+    box-shadow: 0 0 15px rgba(203, 169, 110, 0.5);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .add-thought-button:hover {
-    background: #d4bb84;
+    background: #e6c98a;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(246, 227, 180, 0.7);
 }
+
+/* ============================
+   🌌 Containers dos botões
+============================= */
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.read-more-button {
+    /* position: absolute; */
+    background-color: #4b2f60;
+    color: #fdf6e3; 
+    border: none;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+.read-more-button:hover {
+    background-color: #5e4275; 
+    transform: scale(1.05);
+}
+
+.modal-content .read-more-button {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  color: #fdf6e3;
+  background-color: #b0894e;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+
+.delete-button {
+    /* position: absolute; */
+    right: 0;
+    background-color: #5d2929;
+    color: #fdf6e3; 
+    border: none;
+    font-family: 'Cinzel', serif;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+    box-shadow: 0 0 10px #C83C3C66;
+}
+
+.delete-button:hover {
+    background-color: #7e1515E5;
+    color: #fdf6e3; 
+    transform: scale(1.05);
+}
+
+
+/* ============================
+   🌌 Modal de Leitura
+============================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000099;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+    padding: 32px; /* 🔥 Garante espaçamento interno da tela */
+    overflow-y: auto; /* 🔥 Permite scroll quando necessário */
+}
+
+.modal-content {
+    background: #fff9ec;
+    border: 2px solid #c0a96d;
+    border-radius: 18px;
+    padding: 32px;
+    width: min(800px, 90vw);
+    height: 90vh;           /* 🔥 Novo - define altura de 90% da tela */
+    max-height: 90vh;       /* 🔥 Mantém limite */
+    overflow-y: auto;       /* 🔥 Ativa scroll interno só quando necessário */
+    box-shadow: 0 0 30px #c0a96d66;
+    position: relative;
+    text-align: left;
+    animation: fadeInScale 0.4s ease forwards;
+}
+
+/* Animação de entrada */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-content h2 {
+    color: #3a2d1d;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.modal-content p {
+    color: #3a2d1d;
+    line-height: 1.6;
+    font-size: 1rem;
+    white-space: pre-wrap;
+}
+
+/* 🔘 Botão Fechar */
+.modal-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.modal-footer button {
+    background-color: #c0a96d;
+    color: #fff9ec;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-family:'Cinzel', serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+.modal-footer button:hover {
+    background-color: #a68d55;
+    transform: scale(1.05);
+}
+
+/* 🔥 Scroll estilizado */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #ffffff0d;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #c0a96d;
+    border-radius: 10px;
+    border: 2px solid #fff9ec;
+}
+
 
 /* ============================
    🌌 Modal
 ============================ */
-.modal-overlay {
+.modal-form-overlay {
     position: fixed;
     top: 0;
     left: 0;

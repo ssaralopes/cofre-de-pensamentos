@@ -31,13 +31,13 @@ export default function Login({ onLogin }) {
         {/* 🔮 Cartas do Tarô */}
         <div className="card-container">
             <div className="card-tarot">
-                <img src="/img/estrelas.png" alt="Carta das Estrelas" />
+                <img src={`${process.env.PUBLIC_URL}/img/estrelas.png`}  alt="Carta das Estrelas" />
             </div>
             <div className="card-tarot">
-                <img src="/img/lua.png" alt="Carta da Lua" />
+                <img src={`${process.env.PUBLIC_URL}/img/lua.png`} alt="Carta da Lua" />
             </div>
             <div className="card-tarot">
-                <img src="/img/sol.png" alt="Carta do Sol" />
+                <img src={`${process.env.PUBLIC_URL}/img/sol.png`} alt="Carta do Sol" />
             </div>
          </div>
 
@@ -46,10 +46,13 @@ export default function Login({ onLogin }) {
 
         <div className="page-description">
             <p className="description-text">
-                Este é um lugar que não pertence ao mundo lá fora.  
-                Aqui, cada pensamento se torna semente, guardado como se fosse uma relíquia sagrada da sua própria existência.  
-                O Cofre de Pensamentos é mais que um espaço — é um refúgio para aquilo que só você entende, sente e deseja guardar.  
-                Seus pensamentos se transformam em tesouros invisíveis, protegidos como fragmentos preciosos da sua própria história.  
+                <strong>Este é um lugar que não pertence ao mundo lá fora.</strong> Aqui, cada pensamento se 
+                torna <strong>semente</strong>, guardado como se fosse uma  
+                <strong> relíquia sagrada</strong> da sua própria existência.  
+                O <strong>Cofre de Pensamentos</strong> é mais que um espaço — é um 
+                <strong>refúgio</strong> para aquilo que <strong>só você entende, sente e deseja guardar</strong>.  
+                Seus pensamentos se transformam em <strong>tesouros invisíveis</strong>, protegidos como 
+                <strong> fragmentos preciosos da sua própria história</strong>. 
             </p>
             
             <p className="final-invite">

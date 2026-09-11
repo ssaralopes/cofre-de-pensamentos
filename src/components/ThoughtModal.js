@@ -10,7 +10,7 @@ export default function ThoughtModal({ onClose, onSave }) {
   };
 
   return (
-    <div className="modal-overlay">
+    <div className="modal-form-overlay">
       <form onSubmit={handleSubmit} className="modal-form">
         <h2>Adicionar Pensamento</h2>
         <textarea
