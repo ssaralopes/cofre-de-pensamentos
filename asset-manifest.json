@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cofre-de-pensamentos/static/css/main.73bada2a.css",
+    "main.js": "/cofre-de-pensamentos/static/js/main.22543dd2.js",
+    "static/js/453.c8abc0f4.chunk.js": "/cofre-de-pensamentos/static/js/453.c8abc0f4.chunk.js",
+    "index.html": "/cofre-de-pensamentos/index.html",
+    "main.73bada2a.css.map": "/cofre-de-pensamentos/static/css/main.73bada2a.css.map",
+    "main.22543dd2.js.map": "/cofre-de-pensamentos/static/js/main.22543dd2.js.map",
+    "453.c8abc0f4.chunk.js.map": "/cofre-de-pensamentos/static/js/453.c8abc0f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73bada2a.css",
+    "static/js/main.22543dd2.js"
+  ]
+}
