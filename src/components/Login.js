@@ -78,7 +78,7 @@ export default function Login({ onLogin }) {
 
       <div className="cofre-meaning">
             <a
-            href="https://github.com/ssaralopes"  // substitua pelo seu GitHub real
+            href="https://github.com/ssaralopes"  
             target="_blank"
             rel="noopener noreferrer"
             className="git-button"
