@@ -1,3 +1,4 @@
+
 /* ============================
    🌌 Estilo Global
 ============================ */
@@ -60,6 +61,7 @@ body {
   letter-spacing: 0.75px;
   margin-bottom: 1.5rem; /* aumenta ou diminui o espaçamento antes dos cards */
 }
+
 /* 🃏 cards decorativos */
 .card-tarot {
   width: 180px;
@@ -75,6 +77,7 @@ body {
   transform: translateY(-10px) scale(1.05); /* efeito de elevação */
   box-shadow: 0 0 20px #b0894e; /* aumenta a aura dourada */
 }
+
 .card-container {
   display: flex;
   gap: 3rem;
@@ -83,12 +86,191 @@ body {
   /* margin-bottom: 2rem; */
 }
 
+/* =========================================
+   🃏 Seleção de cartas - Nova Nota
+========================================= */
+
+.card-selection-title {
+    color: #fff9ef;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.card-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(10px, 1.5vw, 16px);
+    margin-bottom: 10px;
+}
+
+.card-option {
+    width: clamp(70px, 8vw, 95px);
+    aspect-ratio: 95 / 145;
+    height: auto;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: #2b1d3700;
+    cursor: pointer;
+    overflow: hidden;
+    flex-shrink: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.card-option:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 0 12px rgba(216, 196, 154, 0.4);
+}
+
+.card-option.selected {
+    border-color: #d8c49a;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 18px rgba(216, 196, 154, 0.5);
+}
+
+.selected-card-meaning {
+    color: #fff9ef;
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    min-height: 32px;
+    margin: 5px 10px 15px;
+}
+
+
+/* =========================================
+   🃏 Conteúdo dos cards do Cofre
+========================================= */
+
+.thought-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.thought-card .card-image {
+    width: calc(100% + 40px);
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: -20px 0 0 -20px;
+    flex-shrink: 0;
+}
+
+.thought-card .thought-text {
+    margin-top: 12px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    word-break: break-word;
+    /* overflow-y: auto;
+    flex: 1;
+    min-height: 0px; */
+}
+
+
+/* =========================================
+   📱 Responsividade - Seleção de cartas
+========================================= */
+
+@media (max-width: 500px) {
+    .modal-form {
+        width: calc(100% - 30px);
+        padding: 20px;
+    }
+
+    .card-selection {
+        display: flex;
+        justify-content: center;
+        gap: clamp(8px, 3vw, 12px);
+        margin: 20px 0;
+    }
+
+    .card-option {
+        width: clamp(62px, 20vw, 85px);
+        aspect-ratio: 85 / 130;
+        height: auto;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        background: #2b1d3700;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 1;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card-option img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+    }
+
+    .card-option:hover {
+        transform: translateY(-5px) scale(1.04);
+        box-shadow: 0 0 12px rgba(216, 196, 154, 0.4);
+    }
+
+    .card-option.selected {
+        border-color: #d8c49a;
+        box-shadow: 0 0 15px rgba(216, 196, 154, 0.45);
+        transform: translateY(-5px) scale(1.05);
+    }
+
+    .card-selection-title {
+        color: #fff9ef;
+    }
+
+    .selected-card-meaning {
+        background: rgba(75, 47, 96, 0);
+        border: 1px solid rgba(216, 196, 154, 0.35);
+        border-radius: 10px;
+        padding: 12px 15px;
+        color: #fff9ef;
+    }
+
+    .thoughts-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .thought-card {
+        position: relative;
+        background-color: #2b1d37;
+        border-radius: 20px;
+        padding: 20px;
+        color: #fff9ef;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        min-height: 450px;
+        width: 100%;
+
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        backdrop-filter: blur(3px);
+    }
+}
+
 .card-tarot img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* faz a imagem preencher todo o card */
-  border-radius: 5px; /* 🔥 mantém as bordas arredondadas igual ao card */
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
 }
 
 
@@ -305,34 +487,31 @@ body.vault-body {
     padding: 20px;
 }
 
-.thought-card { /*cards das notas*/
+.thought-card {
     position: relative;
-    background-color: #2b1d37; 
+    background-color: #2b1d37;
     border-radius: 20px;
     padding: 20px;
     color: #fff9ef;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
+    flex-direction: column;
     gap: 10px;
-    height: 300px;
+
+    min-height: 520px;
+    height: auto;
     width: 100%;
+
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     backdrop-filter: blur(3px);
+    overflow: hidden;
 }
 
 .thought-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 15px rgba(246, 227, 180, 0.6);
     border-color: #e6c98a;
-}
-
-.thought-card p {
-    margin: 0;
-    word-break: break-word;
-    flex-grow: 1;
-    overflow-y: auto;
 }
 
 .add-thought-button {
@@ -362,14 +541,13 @@ body.vault-body {
 ============================= */
 .card-buttons {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
-  margin-top: 10px;
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 .read-more-button {
-    /* position: absolute; */
     background-color: #4b2f60;
     color: #fdf6e3; 
     border: none;
@@ -380,6 +558,7 @@ body.vault-body {
     cursor: pointer;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+    width: 100%;
 }
 
 .read-more-button:hover {
@@ -403,7 +582,6 @@ body.vault-body {
 
 
 .delete-button {
-    /* position: absolute; */
     right: 0;
     background-color: #5d2929;
     color: #fdf6e3; 
@@ -416,6 +594,7 @@ body.vault-body {
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
     box-shadow: 0 0 10px #C83C3C66;
+    width: 100%;
 }
 
 .delete-button:hover {
@@ -425,9 +604,11 @@ body.vault-body {
 }
 
 
+
 /* ============================
    🌌 Modal de Leitura
 ============================= */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -440,20 +621,23 @@ body.vault-body {
     align-items: center;
     z-index: 999;
     backdrop-filter: blur(4px);
-    padding: 32px; /* 🔥 Garante espaçamento interno da tela */
-    overflow-y: auto; /* 🔥 Permite scroll quando necessário */
+    padding: 32px;
+    overflow-y: auto;
 }
 
 .modal-content {
-    background: #fff9ec;
-    border: 2px solid #c0a96d;
+    background: #f4efe6;
+    border: 1px solid #6b5878;
     border-radius: 18px;
     padding: 32px;
     width: min(800px, 90vw);
-    height: 90vh;           /* 🔥 Novo - define altura de 90% da tela */
-    max-height: 90vh;       /* 🔥 Mantém limite */
-    overflow-y: auto;       /* 🔥 Ativa scroll interno só quando necessário */
-    box-shadow: 0 0 30px #c0a96d66;
+    height: 90vh;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    /* sombra roxa */
+    box-shadow: 0 0 30px rgba(75, 47, 96, 0.45);
+
     position: relative;
     text-align: left;
     animation: fadeInScale 0.4s ease forwards;
@@ -472,42 +656,56 @@ body.vault-body {
 }
 
 .modal-content h2 {
-    color: #3a2d1d;
+    color: #4b2f60;
     margin-bottom: 16px;
     text-align: center;
     font-size: 1.8rem;
 }
 
 .modal-content p {
-    color: #3a2d1d;
+    color: #4b2f60;
     line-height: 1.6;
     font-size: 1rem;
     white-space: pre-wrap;
 }
 
-/* 🔘 Botão Fechar */
+/* 🔘 Botões */
 .modal-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
 }
 
 .modal-footer button {
-    background-color: #c0a96d;
-    color: #fff9ec;
+    color: #fff9ef;
     border: none;
     padding: 6px 14px;
     border-radius: 20px;
-    font-family:'Cinzel', serif;
+    font-family: 'Cinzel', serif;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
 }
 
-.modal-footer button:hover {
-    background-color: #a68d55;
+/* Mostrar mais */
+.modal-content .read-more-button {
+    background-color: #904fb0;
+}
+
+.modal-content .read-more-button:hover {
+    background-color: #a8a8a8;
+    transform: scale(1.05);
+}
+
+/* Fechar */
+.modal-footer .close-button {
+    background-color: #6a4d81;
+}
+
+.modal-footer .close-button:hover {
+    background-color: #642c2c;
     transform: scale(1.05);
 }
 
@@ -517,27 +715,29 @@ body.vault-body {
 }
 
 .modal-content::-webkit-scrollbar-track {
-    background: #ffffff0d;
+    background: rgba(75, 47, 96, 0.05);
     border-radius: 10px;
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background-color: #c0a96d;
+    background-color: #6b5878;
     border-radius: 10px;
-    border: 2px solid #fff9ec;
+    border: 2px solid #f4efe6;
 }
+
 
 
 /* ============================
    🌌 Modal
 ============================ */
+
 .modal-form-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(13, 13, 13, 0.9);
+    background: rgba(13, 13, 13, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -545,17 +745,17 @@ body.vault-body {
 }
 
 .modal-form {
-    background: rgba(0, 0, 0, 0.85);
-    border: 2px solid #c0a96d;
-    border-radius: 12px;
+    background: #2b1d37;
+    border: 1px solid #6b5878;
+    border-radius: 18px;
     padding: 25px;
     width: 400px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(192, 169, 109, 0.4);
+    box-shadow: 0 0 25px rgba(75, 47, 96, 0.45);
 }
 
 .modal-form h2 {
-    color: #c0a96d;
+    color: #dcbe89;
     margin-bottom: 15px;
 }
 
@@ -563,9 +763,9 @@ body.vault-body {
     width: 100%;
     padding: 10px;
     border: none;
-    border-bottom: 2px solid #c0a96d;
+    border-bottom: 1px solid #7d6b87;
     background: transparent;
-    color: #f0f0f0;
+    color: #c4c4c4;
     outline: none;
     resize: none;
     margin-bottom: 20px;
@@ -574,29 +774,27 @@ body.vault-body {
 .modal-buttons {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .modal-buttons button {
-    background: #c0a96d;
-    color: #0d0d0d;
+    background: #4b2f60;
+    color: #fff9ef;
     border: none;
     padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .modal-buttons button:hover {
-    background: #d4bb84;
+    background: #345820;
+    transform: translateY(-1px);
 }
 
-.cancel-button {
-    background: transparent;
-    border: 1px solid #c0a96d;
-    color: #c0a96d;
-}
 
-.cancel-button:hover {
-    background: #c0a96d;
-    color: #0d0d0d;
+.modal-buttons .cancel-button:hover {
+    background: #7e1515;
+    border-color: #a52a2a;
+    color: #fff9ef;
 }

@@ -91,14 +91,15 @@ export default function Login({ onLogin }) {
             <p>
                 <strong>Um templo digital</strong> onde seus pensamentos são guardados sob <strong>chave e criptografia</strong>.
                 Desenvolvido em <strong>React</strong>, este cofre aplica <strong>segurança no front-end</strong>: sua <strong>senha mestra</strong> 
-                gera um <strong>hash seguro (SHA-256)</strong> e cifra seus pensamentos com <strong>criptografia simétrica (AES)</strong> <br></br>
+                é transformada em um <strong>hash seguro (SHA-256)</strong> para verificação e cifra seus pensamentos com <strong>criptografia simétrica (AES)</strong> <br></br>
                 <strong>Nada é salvo em texto puro.</strong> Seus segredos vivem <strong>trancados no navegador</strong>, protegidos no 
-                <strong>localStorage</strong>, acessíveis apenas a quem conhece a <strong>chave certa</strong>.
+                <strong>localStorage</strong> do navegador, acessíveis apenas a quem conhece a <strong>chave certa</strong>.
             </p>
             <p>
                 Que este espaço também inspire uma reflexão: <strong>segurança da informação não é exclusividade do back-end</strong>. 
                 <strong>Proteger dados sensíveis começa no ponto mais próximo do usuário.</strong> Neste projeto, <strong>desmistificamos a ideia de que 
-                o front é apenas uma vitrine</strong>. Aqui, ele também é <strong>cofre, guardião e sentinela</strong>.
+                o front é apenas uma vitrine</strong>. Aqui, ele também assume o papel de <strong>cofre, guardião e sentinela</strong>, mostrando que mesmo aplicações executadas no 
+                navegador podem incorporar conceitos importantes de proteção de dados.
             </p>
        </div>
 
