@@ -11,8 +11,8 @@ Mais do que construir uma aplicação pronta para produção, o projeto foi pens
 ---
 ## ✨ Veja no ar!
 
-[![GITHUB](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ssaralopes)
-[![🗝️ NO AR](https://img.shields.io/badge/🗝️%20NO%20AR-00C851?style=for-the-badge)](https://ssaralopes.github.io/cofre-de-pensamentos/)
+[![GITHUB](https://img.shields.io/badge/GITHUB-4e0c7a?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ssaralopes)
+[![🗝️ NO AR](https://img.shields.io/badge/🗝️%20NO%20AR-24402a?style=for-the-badge)](https://ssaralopes.github.io/cofre-de-pensamentos/)
 
 ---
 
@@ -651,7 +651,7 @@ npm run deploy
 
 O projeto está publicado no GitHub Pages:
 
-[![🗝️ NO AR](https://img.shields.io/badge/🗝️%20NO%20AR-00C851?style=for-the-badge)](https://ssaralopes.github.io/cofre-de-pensamentos/)
+[![🗝️ NO AR](https://img.shields.io/badge/🗝️%20NO%20AR-24402a?style=for-the-badge)](https://ssaralopes.github.io/cofre-de-pensamentos/)
 
 O código-fonte está disponível no GitHub:
 
@@ -679,7 +679,7 @@ E talvez essa seja justamente a parte mais importante dele:
 
 Se este projeto despertou sua curiosidade, você pode me encontrar por aqui:
 
-[![GitHub](https://img.shields.io/badge/GitHub-000000?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/ssaralopes)
+[![GitHub](https://img.shields.io/badge/GitHub-4e0c7a?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/ssaralopes)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/ssaralopes/)
 
 ---
