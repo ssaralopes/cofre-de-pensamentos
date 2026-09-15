@@ -465,9 +465,9 @@ A proposta é preservar aquele registro como ele foi escrito naquele momento, em
 
 Existe também uma relação simbólica por trás dessa escolha:
 
-**Nós podemos escrever sobre um pensamento, mas não podemos voltar ao momento exato em que ele surgiu e editá-lo. **
+> **Nós podemos escrever sobre um pensamento, mas não podemos voltar ao momento exato em que ele surgiu e editá-lo.**
 
-**Nota da Dev: **
+> **Nota da Dev:**
 > “A edição não foi implementada de propósito. Eu quis que o projeto fugisse um pouco da lógica tradicional de um aplicativo de notas. Pensamentos nem sempre são textos completos ou ideias organizadas; às vezes são fragmentos que registramos naquele momento. Então a proposta do Cofre é preservar aquele registro como ele foi escrito, em vez de permitir que ele seja posteriormente editado.”
 
 Nesse sentido, o Cofre funciona mais como um **registro de pensamentos** do que como um aplicativo tradicional de anotações.
